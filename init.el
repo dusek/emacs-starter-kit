@@ -73,4 +73,6 @@
 (if (file-exists-p user-specific-dir)
   (mapc #'load (directory-files user-specific-dir nil ".*el$")))
 
+(autoload 'speechd-speak "speechd-speak" nil t)
+(setq speechd-out-active-drivers '(ssip))
 ;;; init.el ends here
